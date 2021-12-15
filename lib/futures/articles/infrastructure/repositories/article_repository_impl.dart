@@ -14,7 +14,7 @@ class ArticleRepositoryImpl extends ArticleRepository{
 
   @override
   Future<Either<Failure, List<Article>>> getArticles() async{
-    bool  isConnected = await networkInfo.isConnected!;
+    bool  isConnected = await networkInfo.isConnected;
     if(isConnected){
       try{
         List<Article>? list = await getArticleRemoteData.getArticles();
