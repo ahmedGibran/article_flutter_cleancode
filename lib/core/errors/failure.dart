@@ -12,3 +12,12 @@ class Failure extends Equatable{
   List<Object?> get props => [message];
 
 }
+
+class ServerFailure extends Failure{
+  final String message;
+  ServerFailure({required this.message}): super(message:message);
+}
+class CacheFailure extends Failure{
+  final String message;
+  CacheFailure({required this.message}): super(message:message);
+}
