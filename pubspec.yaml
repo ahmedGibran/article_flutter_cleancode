@@ -31,6 +31,7 @@ dependencies:
   build_runner: ^2.1.5
   localstorage: ^4.0.0+1
   json_helpers: ^0.1.5
+  http: ^0.13.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
