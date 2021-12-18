@@ -35,7 +35,7 @@ class ArticleRepositoryImpl extends ArticleRepository{
   }
 
   @override
-  Future<Either<Failure, Article>>? getSingleArticle() {
+  Future<Either<Failure, Article>>? getSingleArticle({required String articleId}) {
     // TODO: implement getSingleArticle
     throw UnimplementedError();
   }

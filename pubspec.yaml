@@ -32,6 +32,8 @@ dependencies:
   localstorage: ^4.0.0+1
   json_helpers: ^0.1.5
   http: ^0.13.4
+  provider: ^6.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

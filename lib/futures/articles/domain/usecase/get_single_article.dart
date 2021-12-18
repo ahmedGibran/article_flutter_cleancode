@@ -5,7 +5,7 @@ import 'package:dartz/dartz.dart';
 class GetSingleArticle{
   ArticleRepository articleRepository;
   GetSingleArticle({required this.articleRepository});
-  Future <Either<Failure,Article>?> getSingleArticle()async{
-    return articleRepository.getSingleArticle();
+  Future <Either<Failure,Article>?> getSingleArticle({required String articleId})async{
+    return articleRepository.getSingleArticle(articleId: articleId);
   }
 }

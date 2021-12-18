@@ -9,5 +9,5 @@ class GetArticles{
   Future<Either<Failure, List<Article>>?> getArticles()async{
     return repository.getArticles();
   }
-  
+
 }

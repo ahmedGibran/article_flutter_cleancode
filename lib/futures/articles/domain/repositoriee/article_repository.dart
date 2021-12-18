@@ -6,6 +6,6 @@ import 'package:dartz/dartz.dart';
 abstract class ArticleRepository{
 
 Future<Either<Failure, List<Article>>>? getArticles();
-Future<Either<Failure, Article>>? getSingleArticle();
+Future<Either<Failure, Article>>? getSingleArticle({required String articleId});
 
 }

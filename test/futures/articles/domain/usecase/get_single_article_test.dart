@@ -18,10 +18,10 @@ void main(){
 
   test("should test the get single article fetch data", ()async{
     //set constant return value to the mock get single article when we fetch data that is for make expect matcher
-    when(mockArticleRepository.getSingleArticle()).thenAnswer((_) async=> Right(article));
+    when(mockArticleRepository.getSingleArticle(articleId: "1")).thenAnswer((_) async=> Right(article));
 
     // The result it is the actual value that is most always equal matcher
-    final result = await usecase.getSingleArticle();
+    final result = await usecase.getSingleArticle(articleId: "1");
     expect(result, Right(article));
 
   });

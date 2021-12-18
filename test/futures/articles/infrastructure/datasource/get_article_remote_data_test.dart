@@ -30,7 +30,7 @@ void main(){
       }));
     }
     final fixtureData = json.decode(fixture("articles.json"));
-    List<Article> articles = List<Article>.from(fixtureData.map((item)=>ArticleModel.fromJson(item)));
+    List<Article> articles = List<Article>.from(fixtureData['articles'].map((item)=>ArticleModel.fromJson(item)));
 
     test("should call get Method and statues code should be 200 (success)", ()async{
       callSuccess200();

@@ -26,7 +26,7 @@ class GetArticleRemoteDataImpl implements GetArticleRemoteData{
     if(response.statusCode==200){
 
       final data = json.decode(response.body);
-      for(var item in data){
+      for(var item in data['articles']){
         articles.add(ArticleModel.fromJson(item));
       }
 
