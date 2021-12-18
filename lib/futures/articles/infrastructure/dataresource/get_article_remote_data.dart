@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:article_app/core/core.dart';
+import 'package:article_app/core/utils/constant.dart';
 
 import '../../articles.dart';
 import 'package:http/http.dart' as htp;
@@ -20,7 +21,7 @@ class GetArticleRemoteDataImpl implements GetArticleRemoteData{
   @override
   Future<List<Article>>? getArticles() async{
     List<Article> articles=[];
-    final response = await httpClient.get(Uri.parse("uri"),headers: {
+    final response = await httpClient.get(Uri.parse(Constant().endPoint("")),headers: {
       HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8'
     });
     if(response.statusCode==200){

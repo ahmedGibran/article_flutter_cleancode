@@ -6,7 +6,7 @@ class ArticleModel extends Article{
 
   factory ArticleModel.fromJson(Map<String,dynamic> jsonData){
     return ArticleModel(title: jsonData['title'],
-        imageUrl: jsonData['urlToImage'],
+        imageUrl: jsonData['urlToImage'].toString(),
       description: jsonData['description']
 
     );

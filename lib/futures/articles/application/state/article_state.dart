@@ -6,9 +6,9 @@ import 'package:http/http.dart' as http;
 import 'package:localstorage/localstorage.dart';
 
 class ArticleState extends ChangeNotifier{
-   bool? _isLoading;
-   bool? _isError;
-   bool? _isSuccess;
+   bool _isLoading = false;
+   bool  _isError = false;
+   bool  _isSuccess = false;
    List<Article>? _articles;
    late Article _article;
   final GetArticles getArticles ;
@@ -19,9 +19,9 @@ class ArticleState extends ChangeNotifier{
    //           networkInfo: NetworkInfoImpl(InternetConnectionChecker()),
    //           getArticleRemoteData: GetArticleRemoteDataImpl(httpClient: http.Client()),
    //           getArticleLocalData: GetArticleLocalDataImpl(localStorage: LocalStorage("article_app"))));
-  bool? get isLoading=>_isLoading;
-  bool? get isError=>_isError;
-  bool? get isSuccess=>_isSuccess;
+  bool get isLoading=>_isLoading;
+  bool get isError=>_isError;
+  bool get isSuccess=>_isSuccess;
   List<Article>? get articles=>_articles;
   Article get article=>_article;
    ArticleState({required  this.getArticles, required this.getSingleArticles}){
@@ -29,6 +29,7 @@ class ArticleState extends ChangeNotifier{
      _isError = false;
      _isLoading = false;
      _articles =[];
+     getArticlesState();
    }
 
   Future<void> getArticlesState()async{
